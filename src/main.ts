@@ -27,7 +27,9 @@ async function bootstrap() {
       "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.15.5/swagger-ui.css"
     ]
   });
-
+app.enableCors({
+  origin: 'https://tools.tofudigital.in/'
+});
   app.useStaticAssets(join(__dirname, "..", "uploads"));
 
   await app.listen(3000);
